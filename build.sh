@@ -6,3 +6,4 @@ mv CNAME ./docs
 git add .
 git commit -m "Contents updated"
 git push origin master
+echo "https://superset.cc"
