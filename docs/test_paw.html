@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Deeplink Test</title>
+        <script>
+        (function(a_,i_,r_,_b,_r,_i,_d,_g,_e){if(!a_[_b]){var d={queue:[]};_r.concat(_i).forEach(function(a){var i_=a.split("."),a_=i_.pop();i_.reduce(function(a,i_){return a[i_]=a[i_]||{}},d)[a_]=function(){d.queue.push([a,arguments])}});a_[_b]=d;a_=i_.getElementsByTagName(r_)[0];i_=i_.createElement(r_);i_.onerror=function(){d.queue.filter(function(a){return 0<=_i.indexOf(a[0])}).forEach(function(a){a=a[1];a=a[a.length-1];"function"===typeof a&&a("error occur when load airbridge")})};i_.async=1;i_.src="//static.airbridge.io/sdk/latest/airbridge.min.js";a_.parentNode.insertBefore(i_,a_)}})(window,document,"script","airbridge","init setBanner setDownload setDownloads setDeeplinks sendSMS sendWeb setUserAgent setUserAlias addUserAlias setMobileAppData setUserId setUserEmail setUserPhone setUserAttributes setDeviceIFV setDeviceIFA setDeviceGAID events.send events.signIn events.signUp events.signOut events.purchased events.addedToCart events.productDetailsViewEvent events.homeViewEvent events.productListViewEvent events.searchResultViewEvent".split(" "),["events.wait"]);
+
+        airbridge.init({
+            app: 'ablog',
+            webToken: '8ec37a00b37a4576a7f8bdf8d5164dd5',
+            useProtectedAttributionWindow: true,
+            protectedAttributionWindowInMinutes: 60,
+            utmParsing: true
+        });
+        </script>
+    </head>
+    <body>
+        <button id="deeplink-button">Deeplink with default params</button>
+        <button id="deeplink-button-1">Deeplink without default params</button>
+    </body>
+    <script>
+        airbridge.setDeeplinks({
+            buttonID: "deeplink-button",
+            deeplinks: {
+                ios: "ablog://main",
+                android: "ablog://main",
+                desktop: "http://blog.ab180.co"
+            },
+            defaultParams: {
+                campaign: 'example_campaign_1',
+                medium: 'example_medium_2',
+                term: 'example_term_3',
+                content: 'example_content_4'
+            },
+            desktopPopUp: true
+        });
+        airbridge.setDeeplinks({
+            buttonID: "deeplink-button-1",
+            deeplinks: {
+                ios: "ablog://main",
+                android: "ablog://main",
+                desktop: "http://blog.ab180.co"
+            },
+            desktopPopUp: true
+        });
+    </script>
+</html>
