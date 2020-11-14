@@ -84,9 +84,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       {{/if}}
     <div class="Header__Spacer {{if(!options.post.cover)}}Header__Spacer--NoCover{{/if}}">
     </div>
-    {{if(options.post.icon)}}
-    <div class="Header__Icon">{{post.iconHTML}}</div>
-    {{/if}}
     <h1 class="Header__Title">{{post.title}}</h1>
         {{if(options.post.date || options.post.tags.length)}}
     <div class="DateTagBar">
