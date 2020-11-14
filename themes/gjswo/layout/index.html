@@ -51,6 +51,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {{/each}}
   </nav>
   <header class="Header">
+    <div class="Header__Spacer {{if(!options.siteMeta.cover)}}Header__Spacer--NoCover{{/if}}">
+    </div>
   </header>
   <article class="ArticleList">
       {{each(options.siteMeta.pages)}}
