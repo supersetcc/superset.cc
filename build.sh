@@ -1,4 +1,4 @@
-notablog generate .
+/Users/hunjae/.nvm/versions/node/v10.19.0/bin/notablog generate .
 rm -rf docs
 mkdir docs
 mv public/* docs/
