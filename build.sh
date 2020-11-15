@@ -9,3 +9,4 @@ git commit -m "Contents updated"
 git push origin master
 rm -rf public
 echo "https://superset.cc"
+open docs/index.html
