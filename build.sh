@@ -1,5 +1,5 @@
 #/Users/hunjae/.nvm/versions/node/v10.19.0/bin/node /Users/hunjae/.nvm/versions/node/v10.19.0/bin/notablog generate .
-/usr/local/bin/notablog generate .
+/usr/local/bin/node /usr/local/bin/notablog generate .
 rm -rf docs
 mkdir docs
 mv public/* docs/
