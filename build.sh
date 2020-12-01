@@ -10,4 +10,4 @@ git commit -m "Contents updated"
 git push origin master
 rm -rf public
 echo "https://superset.cc"
-open docs/index.html
+echo "file:///Users/ab180/Dropbox/dev/supersetcc/docs/index.html" | pbpaste
